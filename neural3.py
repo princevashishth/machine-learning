@@ -154,7 +154,7 @@ class dlnet:
 # preparing data 
 
 
-df = pd.read_csv('wisconsin-cancer-dataset.csv',header=None)
+df = pd.read_csv('cancer.csv',header=None)
 df = df[~df[6].isin(['?'])]                              #eliminate rows that contain ?
 df = df.astype(float)
 df.iloc[:,10].replace(2, 0,inplace=True)                 #changing from 2 to 0 in column 10
